@@ -33,11 +33,13 @@ Please check the security module to adjust the the egress and ingress as per you
 This current module version has not been configured create and output the workspace token yet due to some bugs. The issue is being looked into, should be enabled in the next version of this module.
 
 So for now, at first run, comment out the manage databricks workspace module(this include its section on the `.tfvars` file and `varaiable.tf` file). After the work space is created the you can uncomment them; along side this line in `data.tf`
+
 ````
 # data "databricks_current_user" "me" {}
 ```
 
 also this block of code in the `main.tf` :
+
 ```
 # provider "databricks" {
 #   host  = var.host
